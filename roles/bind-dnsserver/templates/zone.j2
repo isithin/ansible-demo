@@ -1,0 +1,4 @@
+$TTL 86400
+{% for r in item.records %}
+{{ r.name }}  IN  {{ r.type }} {{ r.value }}
+{% endfor %}

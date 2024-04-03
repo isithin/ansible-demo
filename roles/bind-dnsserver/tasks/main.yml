@@ -1,0 +1,25 @@
+---
+
+- name: Install bind and bind-utils
+  yum:
+    name: bind, bind-utils
+    state: present
+
+- name: Copy General Config File
+  template:
+    src: "templates/named.conf.j2"
+    dest: "/etc/named.conf"
+
+- name: Generate Local Config File
+  template:
+    src: "templates/named.conf.local.j2"
+    dest: "/etc/named.conf.local"
+
+- name: Generate Zone Files
+  template:
+    src: "templates/zone.j2"
+    dest: "/var/named/{{ item.file }}"
+  loop: "{{ zone_entries }}"
+  notify: restart named
+  when: zone_entries | length > 0
+

@@ -1,0 +1,8 @@
+---
+
+- hosts:
+    - dns
+  remote_user: root
+  gather_facts: yes
+  roles:
+    - bind-dnsserver

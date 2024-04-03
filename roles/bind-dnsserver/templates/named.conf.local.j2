@@ -1,0 +1,7 @@
+{{ ansible_managed | comment }}
+{% for item in zone_entries %}
+zone "{{ item.name }}" IN {
+    type master;
+    file "{{ item.file }}";
+};
+{% endfor %}
