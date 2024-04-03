@@ -25,7 +25,7 @@ zone_entries:
         value: "192.168.122.150"
       - name: "web"
         type: "A"
-        value: "192.168.122.25"
+        value: "192.168.122.250"
   - name: "122.168.192.in-addr.arpa"
     file: "192.168.122.db"
     records:
