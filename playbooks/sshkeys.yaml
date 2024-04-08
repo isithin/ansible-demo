@@ -1,0 +1,22 @@
+---
+
+- hosts: 
+    - all
+  gather_facts: no
+  remote_user: root
+  vars: 
+    keys:
+      - Isabel
+      - Dennis
+      - Nils
+
+  tasks:
+
+  - name: Deploy SSH-Keys to remote host
+    authorized_key:
+      user: root
+      key: "{{ item.sshkey }}"
+      state: "{{ item.state | default('present')}}"
+    when: item.name in sshkeys_thisHost
+    loop: "{{ sshkeys }}"
+

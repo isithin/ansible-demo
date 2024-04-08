@@ -1,3 +1,6 @@
+---
+
+### dns ###
 zone_entries:
   - name: "demo.lan"
     file: "demo.lan.db"
@@ -47,3 +50,10 @@ zone_entries:
       - name: "20"
         type: "PTR"
         value: "nadm.demo.lan"
+
+### sshkeys ###
+sshkeys_thisHost:
+  - Isabel
+  - Dennis
+  - Nils
+

@@ -1,0 +1,10 @@
+---
+
+webservers:
+  hosts:
+    web-01.demo.lan:
+    web-02.demo.lan:
+
+dns:
+  hosts:
+    dealer.demo.lan:

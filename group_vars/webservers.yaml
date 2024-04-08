@@ -1,3 +1,13 @@
 ---
 
+### webservers ###
 website_content: "General content from group_vars"
+
+
+### sshkeys ###
+sshkeys_thisHost:
+  - Isabel
+  - Dennis
+  - Nils
+
+
