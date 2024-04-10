@@ -1,7 +1,7 @@
 ---
 
 ### webservers ###
-website_content: "General content from group_vars"
+webservers_website_content: "General content from group_vars"
 
 
 ### sshkeys ###

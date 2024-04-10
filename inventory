@@ -1,6 +1,0 @@
-[webservers]
-web-01.demo.lan
-web-02.demo.lan
-
-[dns]
-dealer.demo.lan
